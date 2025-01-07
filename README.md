@@ -1,0 +1,2 @@
+# PUBLICATION-SUMMARY-GENERATOR-FOR-FACULTY-MEMBER-PROFILE-BUILDING
+ "Publication Summary Generator for Faculty Members," a user-friendly web application. This system automates the collection and summarization of publication data by integrating platforms like Google Scholar. It also provides features such as visualizations, downloadable summaries, adding custom records, and new publication entries
