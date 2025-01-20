@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaraAnsh - Upload Data</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .navbar {
+                background: linear-gradient(90deg, rgb(112, 128, 144), rgb(192, 192, 192));
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            .navbar-brand {
+                font-weight: bold;
+                font-size: 1.75rem;
+                color: white;
+            }
+    
+            .nav-item{
+                padding: 0px 10px;
+            }       
+    
+            .navbar-nav .nav-link {
+                font-weight: bold;
+                font-size: 1.25rem;
+                padding: 0px 7px; /* Increased space around navbar text */
+            }
+    
+            .navbar-nav .nav-link:hover {
+                color: #d4d4d4;
+            }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="bi bi-file-ppt-fill"></i> SaraAnsh</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'upload' %}">Upload</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="{% url 'generatesummary' %}">Generate Summary</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'settings' %}">Settings</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'help' %}">Help</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% if warning_message %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ warning_message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{% endif %}
+
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <!-- Title Section -->
+    <div class="text-center mb-4">
+      <h1 class="fw-bold">Upload Your Data</h1>
+      <p class="lead text-muted">Simplify and manage your publication records for profile building.</p>
+    </div>
+
+    <!-- Upload Form -->
+    <div class="card shadow p-4">
+      <form id="uploadForm" action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="dataFile" class="form-label fw-semibold">Upload Excel or BibTeX File</label>
+          <input type="file" class="form-control" id="dataFile" name="excel_file" accept=".xlsx,.xls,.bib" required>
+        </div>
+        <div class="text-center">
+          <button type="submit"  id="uploadButton" class="btn btn-primary btn-lg">Upload & Generate</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+
+  <!-- {% if messages %}
+  {% for message in messages %}
+      <script>
+          if (confirm("{{ message }}")) {
+              window.location.href = "{% url 'login' %}";
+          }
+      </script>
+  {% endfor %}
+{% endif %} -->
+
+  
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white mt-auto">
+    <div class="container py-4">
+      <div class="row">
+        <!-- Quick Links -->
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Terms of Service</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- Contact Information -->
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Contact Information</h5>
+          <p><i class="bi bi-geo-alt me-2"></i>Kanchanwadi, Chh. Sambhajinagar, Maharashtra</p>
+          <p><i class="bi bi-envelope me-2"></i><a href="mailto:info@SaraAnsh.com" class="text-white text-decoration-none">info@SaraAnsh.com</a></p>
+          <p><i class="bi bi-telephone me-2"></i>+91 9876543210</p>
+        </div>
+        <!-- Social Media -->
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Follow Us</h5>
+          <div>
+            <a href="#" class="text-white me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-3" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white me-3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white me-3" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-white me-3" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-secondary text-center py-2">
+      &copy; 2024 SaraAnsh. All rights reserved.
+    </div>
+
+    <script type="text/javascript">
+      document.getElementById("uploadButton").onclick = function(event) {
+          event.preventDefault();  // Prevent form submission
+  
+          // Show the alert
+          alert("You should sign up or login first");
+  
+          // Redirect to login page after clicking OK on the alert
+          window.location.href = "{% url 'login' %}";  // Use URL name to navigate to the login page
+      };
+  </script>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

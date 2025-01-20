@@ -1,0 +1,344 @@
+
+/* Start navbar */
+
+.navbar{
+    background-color:  linear-gradient(90deg, rgb(112, 128, 144), rgb(192, 192, 192));;
+    font-weight:600;
+  }
+  .nav-item{
+    padding:0px 10px;
+  }
+  /* End navbar */
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  footer {
+    background-color:grey;
+  }
+  
+  table {
+    margin-top: 20px;
+  }
+  
+  /* Start carousel */
+  .carousel-item {
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Adjust background image */
+  .bg1 {
+    background-image: url("slider/1.png"); /* Make sure the file paths are correct */
+  }
+  .bg2 {
+    background-image: url("slider/2.jpg");
+  }
+  .bg3 {
+    background-image: url("slider/3.jpg");
+  }
+  
+  .mycaption {
+    color: #fff;
+    position: relative;
+    text-align: center;
+    width: 40%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+  }
+  @media only screen and (max-width: 720px){
+    .mycaption{
+        width: 80%;
+    }
+  }
+  
+  .mycaption h3 {
+    text-align: center;
+  }
+  .mycaption p {
+    text-align: center;
+  }
+  .readmore {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .readmore:hover {
+    background-color: #fff;
+    color: rgb(80, 85, 231);
+  }
+  
+  
+  /* End carousel */
+  
+  /* General styles */
+  
+  /* Login and Help Section styles */
+  #login, #help {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #login h2, #help h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  #login input[type="text"], #login input[type="password"], #help textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #login input[type="submit"], #help input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #login input[type="submit"]:hover, #help input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  #help p {
+    margin-bottom: 20px;
+  }
+  
+  
+  /* General Styles */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  p.lead {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background: linear-gradient(90deg, rgb(112, 128, 144), rgb(192,192,192));
+  }
+  
+  .navbar-brand {
+    color: #ffffff;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #ffffff;
+  }
+  
+  .navbar-nav .nav-link.active {
+    font-weight: bold;
+  }
+  
+  /* Form Styles */
+  form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .btn-primary:hover {
+    background-color: #004494;
+    border-color: #004494;
+  }
+  
+  .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+  }
+  
+  .btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+  }
+  
+  /* Table Styles */
+  .table {
+    background-color: #ffffff;
+    border-radius: 8px;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2;
+  }
+  /* Navbar Styles */
+  .navbar {
+    background: linear-gradient(90deg, rgb(192, 192, 192), rgb(112, 128, 144));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px; /* Adjust padding as needed */
+    display: flex;
+    justify-content: space-between; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+  
+  /* Navbar Brand */
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.75rem;
+    color: white;
+  }
+  .navbar-brand:hover{
+    color:black;
+  
+  }
+  
+  /* Navbar Items */
+  .nav-item {
+    padding: 0 10px;
+  }
+  
+  /* Navbar Links */
+  .navbar-nav .nav-link {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: black;
+    padding: 0 7px; /* Space around navbar text */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #d4d4d4; /* Color on hover */
+  }
+  .button{
+    padding: none;
+    display:inline-block;
+    font-size: 16px;
+    font-size: 1.25rem;
+    color:black;
+    font-weight: bold;
+    background-color: rgb(192, 192, 192);
+  }
+  .button{border-radius: 10px;}
+  
+  /* Responsive Adjustment */
+  @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center; /* Center text for better alignment */
+    }
+  
+    .nav-item {
+        padding: 10px 0; /* Adjust spacing for stacked items */
+    }
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 60px 0;
+    border-top: 1px solid #454d55; /* Subtle border for separation */
+  }
+  
+  footer .container {
+    display: flex;
+    flex-wrap: wrap; /* Allows for responsive behavior */
+    justify-content: space-between; /* Spreads out the sections */
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px; /* Ensures minimum width for responsiveness */
+    margin-bottom: 20px;
+  }
+  
+  .footer-links, .footer-contact, .footer-social {
+    margin-bottom: 20px;
+  }
+  
+  .footer-links a, .footer-contact p, .footer-social a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a:hover, .footer-social a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-links a {
+    font-size: 1.1rem;
+  }
+  
+  .footer-contact {
+    font-size: 1.1rem;
+  }
+  
+  .footer-contact i {
+    font-size: 1.4rem; /* Slightly larger icons for visibility */
+    margin-right: 10px;
+  }
+  
+  .footer-social {
+    text-align: center; /* Center-align the content */
+  }
+  
+  .footer-social h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem; /* Adjust font size for the title */
+  }
+  
+  .footer-social .social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+  }
+  
+  .footer-social a {
+    margin: 0 10px; /* Space between icons */
+  }
+  
+  .footer-social i {
+    font-size: 1.8rem; /* Larger icons for better visibility */
+    color: #ffffff;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer-social i:hover {
+    color: #cccccc;
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+  }
+  
+  .footer-copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin-top: 20px;
+  }
